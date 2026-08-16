@@ -1,154 +1,158 @@
-.research-container {
-	margin-left: 4rem;
-	margin-right: 4rem;
-	margin-top: 6rem;
-	border-radius: 1rem;
-	padding: 1rem;
+.research-container, .teaching-container {
+	width: 80%;
+	max-width: 1200px;
+	margin: 2rem auto;
+	padding: 2.5rem;
+	background: var(--glass-bg);
+	border-radius: 20px;
+	border: 1px solid var(--glass-border);
+	box-shadow: var(--glass-shadow);
+	backdrop-filter: var(--glass-blur);
+	-webkit-backdrop-filter: var(--glass-blur);
 }
 
-.research-container h2 {
-	border-bottom: 2px solid #008f90;
-}
-
-.research-container_content .research {
-	border-radius: 0.2rem;
-	background-color: #ffffff;
-	margin-top: 1rem;
-	overflow: hidden;
-}
-
-.research-container_content .research-header {
+.research-container h2, .teaching-container h2 {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
-	cursor: pointer;
-	padding: 1rem;
-	background-color: #ffffff;
-	border-radius: 0.2rem;
+	gap: 10px;
+	font-size: 2.2rem;
+	color: var(--accent-primary);
+	margin-bottom: 2rem;
+	border-bottom: 2px solid rgba(0, 240, 255, 0.3);
+	padding-bottom: 1rem;
 }
 
-.research-container_content .research-header h4 {
-	margin: 0;
-}
-
-.research-container_content .research-header h4 span {
-	font-weight: 100;
-}
-
-.research-container_content .toggle-icon {
-	font-size: 1.5rem;
-	font-weight: bold;
-}
-
-.research-container_content .research-details {
-	padding: 1rem;
-	background-color: #ffffff;
-	border-top: 1px solid #008f90;
-	max-height: 0;
-	overflow: hidden;
-	transition: max-height 0.5s ease-out;
-}
-
-.research-container_content .research-details.show {
-	max-height: 500px;
-}
-
-.teaching-container_content .teach {
-	border-radius: 0.2rem;
-	background-color: #ffffff;
-	overflow: hidden;
-	/* margin-bottom: 2rem; */
-	margin-top: 1rem;
-}
-
-.teaching-container_content .teach:nth-last-child(1){
-	margin-bottom: 3rem;
-}
-
-.teaching-container_content .teach-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	cursor: pointer;
-	padding: 1rem;
-	background-color: #ffffff;
-	border-radius: 0.2rem;
-}
-
-.teaching-container_content .teach-header h4 {
-	margin: 0;
-}
-
-.teaching-container_content .teach-header h4 span {
-	font-weight: 100;
-}
-
-.teaching-container_content .toggle-icon {
-	font-size: 1.5rem;
-	font-weight: bold;
-}
-
-.teaching-container_content .teach-details {
-	padding: 1rem;
-	background-color: #ffffff;
-	border-top: 1px solid #008f90;
-	max-height: 0;
-	overflow: hidden;
-	transition: max-height 0.5s ease-out;
-}
-
-.teaching-container {
-	margin-left: 4rem;
-	margin-right: 4rem;
-	margin-top: 2rem;
-	border-radius: 1rem;
-	padding: 1rem;
+.research-container h2 svg, .teaching-container h2 svg {
+	color: var(--text-main);
+	filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.5));
 }
 
 .teaching-container h2 {
-	border-bottom: 2px solid #008f90;
+	color: var(--accent-secondary);
+	border-bottom: 2px solid rgba(138, 43, 226, 0.3);
 }
 
-.teaching-container_content .teach-details.show {
-	max-height: 500px;
+.teaching-container h2 svg {
+	filter: drop-shadow(0 0 8px rgba(138, 43, 226, 0.5));
 }
 
-.research-container .research-details ul {
-	padding-top: 1rem;
-	padding-left: 1rem;
-}
-.teaching-container .teach-details ul {
-	padding-top: 0.5rem;
-	padding-left: 1rem;
-}
-.teaching-container .teach-details p {
-	padding-top: 1rem;
-	padding-left: 1rem;
+.research-container_content, .teaching-container_content {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
 }
 
-.grants_awards_header {
+.research, .teach {
+	background: rgba(255, 255, 255, 0.02);
+	border: 1px solid rgba(255, 255, 255, 0.05);
+	border-radius: 12px;
+	overflow: hidden;
+	transition: all 0.3s ease;
+}
+
+.research:hover, .teach:hover {
+	background: rgba(255, 255, 255, 0.05);
+	border-color: rgba(0, 240, 255, 0.2);
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.teach:hover {
+	border-color: rgba(138, 43, 226, 0.2);
+}
+
+.research-header, .teach-header, .grants_awards_header {
+	padding: 1.5rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	cursor: pointer;
-	padding: 1rem;
-	background-color: #ffffff;
-	border: 0.1rem solid #008f90;
-	border-radius: 0.2rem;
+	user-select: none;
 }
 
-.grants_awards_header h4 span {
-	font-weight: 100;
+.research-header h4, .teach-header h4, .grants_awards_header h4 {
+	font-family: var(--font-main);
+	font-size: 1.2rem;
+	color: var(--text-main);
+	margin: 0;
+	line-height: 1.4;
+	font-weight: 600;
 }
 
-@media screen and (max-width: 800px) {
-	.research-container,
-	.teaching-container {
-		/* margin-top: 6rem; */
-		margin-left: 0rem;
-		margin-right: 0rem;
+.research-header h4 span, .teach-header h4 span, .grants_awards_header h4 span {
+	display: block;
+	font-size: 0.95rem;
+	color: var(--text-muted);
+	font-weight: 400;
+	margin-top: 0.5rem;
+}
+
+.toggle-icon {
+	font-size: 1.5rem;
+	color: var(--accent-primary);
+	transition: transform 0.3s ease;
+	width: 24px;
+	text-align: center;
+}
+
+.teach-header .toggle-icon {
+	color: var(--accent-secondary);
+}
+
+.research-details, .teach-details {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.4s ease-out, padding 0.4s ease;
+	padding: 0 1.5rem;
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.research-details.show, .teach-details.show {
+	max-height: 800px;
+	padding: 1.5rem;
+	border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.research-details ul, .teach-details ul {
+	margin: 0;
+	padding-left: 1.5rem;
+	color: var(--text-muted);
+}
+
+.research-details li, .teach-details li, .grants_awards_header + div li {
+	margin-bottom: 0.8rem;
+	line-height: 1.6;
+}
+
+.research-details li::marker, .teach-details li::marker {
+	color: var(--accent-primary);
+}
+
+.teach-details li::marker {
+	color: var(--accent-secondary);
+}
+
+.grants_awards_header + div {
+	padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.grants_awards_header + div ul {
+	padding-left: 1.5rem;
+	color: var(--text-muted);
+	margin: 0;
+}
+
+.grants_awards_header + div li::marker {
+	color: var(--accent-secondary);
+}
+
+/* Responsive */
+@media screen and (max-width: 980px) {
+	.research-container, .teaching-container {
+		width: 90%;
+		padding: 1.5rem;
 	}
-	.teaching-container_content .teach-details.show ul {
-		padding-left: 1rem;
+	
+	.research-header h4, .teach-header h4, .grants_awards_header h4 {
+		font-size: 1.1rem;
 	}
 }

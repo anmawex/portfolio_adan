@@ -1,65 +1,82 @@
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
 .grantsawards-container {
-	padding: 1rem;
-	margin-left: 4rem;
-	margin-right: 4rem;
-	margin-top: 6rem;
-
-	border-radius: 1rem;
-	overflow-x: hidden;
+	width: 80%;
+	max-width: 1200px;
+	margin: 2rem auto;
+	padding: 2.5rem;
+	background: var(--glass-bg);
+	border-radius: 20px;
+	border: 1px solid var(--glass-border);
+	box-shadow: var(--glass-shadow);
+	backdrop-filter: var(--glass-blur);
+	-webkit-backdrop-filter: var(--glass-blur);
+	margin-bottom: 4rem;
 }
 
 .grantsawards-container h2 {
-	border-bottom: 2px solid #008f90;
-	padding-bottom: 0.5rem;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-size: 2.2rem;
+	color: var(--accent-primary);
+	margin-bottom: 2rem;
+	border-bottom: 2px solid rgba(0, 240, 255, 0.3);
+	padding-bottom: 1rem;
+}
+
+.grantsawards-container h2 svg {
+	color: var(--text-main);
+	filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.5));
 }
 
 .grantsawards_items {
-	background: #ffffff;
-	border: 0.1rem solid #008f90;
-	border-radius: 0.2rem;
-	margin-top: 1rem;
-	padding: 1rem;
+	background: rgba(255, 255, 255, 0.02);
+	border: 1px solid rgba(255, 255, 255, 0.05);
+	border-radius: 12px;
+	padding: 1.5rem;
+	margin-bottom: 1.5rem;
+	transition: all 0.3s ease;
 }
 
-.grantsawards_items:nth-last-child(1){
-	margin-bottom: 3rem;
+.grantsawards_items:hover {
+	background: rgba(255, 255, 255, 0.05);
+	border-color: rgba(138, 43, 226, 0.3);
+	transform: translateX(10px);
+	box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.2);
 }
 
 .grantsawards_items p {
 	margin: 0;
-	word-wrap: break-word;
+	color: var(--text-muted);
+	line-height: 1.6;
+	font-size: 1.05rem;
 }
 
 .grantsawards_items p a {
-	color: #008f90;
+	color: var(--accent-primary);
+	text-decoration: none;
+	font-weight: 500;
+	transition: color 0.3s ease, text-shadow 0.3s ease;
+	display: inline-block;
+	margin-top: 0.5rem;
 }
-.grantsawards_items p a:visited {
-	color: #008f90;
+
+.grantsawards_items p a:hover {
+	color: #fff;
+	text-shadow: 0 0 10px var(--accent-primary);
 }
 
 .grantsawards_items p span {
-	font-weight: bold;
+	font-weight: 600;
+	color: var(--text-main);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 980px) {
 	.grantsawards-container {
-		margin-left: 0rem;
-		margin-right: 0rem;
+		width: 90%;
+		padding: 1.5rem;
 	}
-}
-
-@media screen and (max-width: 416px) {
-	.grantsawards-container {
-		margin-top: 4rem;
-		padding: 0.5rem;
-		width: 100%;
+	
+	.grantsawards_items:hover {
+		transform: translateY(-5px);
 	}
 }

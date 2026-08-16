@@ -1,9 +1,16 @@
 .footer {
-	height: 4rem;
-	background-color: #ffffff;
-	font-size: 1.2rem;
-	font-weight: 600;
+	width: 100%;
+	padding: 2rem 1rem;
+	background: var(--glass-bg);
+	backdrop-filter: var(--glass-blur);
+	-webkit-backdrop-filter: var(--glass-blur);
+	border-top: 1px solid var(--glass-border);
+	font-size: 0.95rem;
+	font-weight: 500;
+	color: var(--text-muted);
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-top: auto;
+	letter-spacing: 0.5px;
 }

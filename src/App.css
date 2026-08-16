@@ -1,10 +1,6 @@
-body {
-	font-family: "Oswald", sans-serif; /* Cambia 'Roboto' por la fuente que elegiste */
-	margin: 0; /* Opcional: para eliminar márgenes por defecto */
-	padding: 0; /* Opcional: para eliminar padding por defecto */
-	font-optical-sizing: auto;
-	font-weight: weight;
-	font-style: normal;
+.app-container {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	padding-top: 80px; /* Space for the floating navbar */
 }
-
-/* Si tienes otros elementos que quieras estilizar globalmente, también puedes agregarlo aquí */

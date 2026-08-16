@@ -1,20 +1,12 @@
 import React from "react";
 import "./AboutMe.css";
-import { FaUniversity, FaLinkedin, FaGithubSquare, FaResearchgate } from "react-icons/fa";
+import { FaUniversity, FaLinkedin, FaGithubSquare, FaResearchgate, FaDownload } from "react-icons/fa";
 import { FaGoogleScholar } from "react-icons/fa6";
 import { MdContactMail } from "react-icons/md";
 import Footer from "./Footer";
 
 const AboutMe = () => {
-	// Define la función descargarCV
-	const descargarCV = () => {
-		const link = document.createElement("a");
-		link.href = `${process.env.PUBLIC_URL}/adan_gomez_cv.pdf`; // Ruta al archivo PDF
-		link.download = "adan_gomez_cv.pdf"; // Nombre con el que se descargará
-		document.body.appendChild(link);
-		link.click();
-		document.body.removeChild(link);
-	};
+	const cvUrl = `${process.env.PUBLIC_URL}/adan_gomez_cv.pdf`;
 
 	return (
 		<div className="allcontainer">
@@ -30,10 +22,16 @@ const AboutMe = () => {
 								Universidad de Córdoba, Colombia, I co-created the CARINA metacognitive architecture for agent cognition control. I currently collaborate with Dr. Ron Sun at RPI’s
 								CogArch Lab to further explore cognitive modeling, machine learning, and social psychology.
 							</p>
-							<button onClick={descargarCV}>
-								Download CV <i className="fa-solid fa-download"></i>
+							<a
+								href={cvUrl}
+								download="adan_gomez_cv.pdf"
+								target="_blank"
+								rel="noreferrer noopener"
+								className="cv-download-btn"
+							>
+								Download CV <FaDownload />
 								<span className="overlay"></span>
-							</button>
+							</a>
 						</div>
 					</div>
 				</div>
