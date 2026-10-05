@@ -14,7 +14,7 @@ const Projects = () => {
 					<div className="projects_items">
 						<h3>El espejo socrático</h3>
 						<p>
-							Investigación doctoral aumentada: guías, modelo y prompts para usar IA agéntica sin ceder la agencia epistémica.
+							Augmented doctoral research: guides, model, and prompts to use agentic AI without yielding epistemic agency.
 						</p>
 						<a className="project-btn" target="_blank" rel="noreferrer noopener" href="/espejo-socratico/">
 							Open Project
