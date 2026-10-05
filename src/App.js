@@ -5,6 +5,7 @@ import AboutMe from "./AboutMe"; // Asegúrate de importar el componente
 import Experience from "./Experience";
 import Publications from "./Publications";
 import Software from "./Software";
+import Projects from "./Projects";
 import "./App.css";
 const App = () => {
 	return (
@@ -15,6 +16,7 @@ const App = () => {
 				<Route path="/experience" element={<Experience />} />
 				<Route path="/publications" element={<Publications />} />
 				<Route path="/software" element={<Software />} />
+				<Route path="/projects" element={<Projects />} />
 			</Routes>
 		</div>
 	);
